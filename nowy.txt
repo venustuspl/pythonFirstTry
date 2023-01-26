@@ -1,0 +1,10 @@
+linia numer 0 
+linia numer 1 
+linia numer 2 
+linia numer 3 
+linia numer 4 
+linia numer 5 
+linia numer 6 
+linia numer 7 
+linia numer 8 
+linia numer 9 
