@@ -19,3 +19,9 @@
 #{1,5} - od jednego do pięciu wystąpień
 #{5,} - co najmniej 5 wystąpień
 #{,5} - do 5 wystąpień
+
+
+import re
+tekst='Pod tym numerem możesz zamówić kebsika: 22 299 53 69. Trzeba prosić do telefonu Panią Bożenkę. '
+wz='[\d ]{9,}'
+print(re.findall(wz,tekst))
