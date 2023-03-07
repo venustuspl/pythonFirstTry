@@ -7,6 +7,7 @@ plt.plot(z,'g:',label='Seria z')
 plt.grid()
 plt.xlabel('oś X')
 plt.ylabel('oś Z')
+plt.savefig('wykres.png')
 plt.show()
 
 #random()	Returns a random float number between 0 and 1
