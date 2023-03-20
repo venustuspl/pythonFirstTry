@@ -47,3 +47,22 @@ md['klucz2']='wartość2'
 print(md['klucz'])
 print(md['klucz1'])
 print(md['klucz2'])
+
+
+#static methods
+
+class Ms:
+    def zwykla(self):
+        print('hej, jestem zwykłą metodą')
+        pass
+    @staticmethod
+    def statyczna():
+        print('hej, jestem metodą statyczną')
+        pass
+
+ms=Ms()
+ms.zwykla()
+Ms.statyczna()
+# normal method as static
+Ms.zwykla(None)
+
