@@ -1,3 +1,4 @@
+import jinja2
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -13,7 +14,7 @@ def hello():
 
 @app.route('/index')
 def hello_template():
-    return render_template("index.html")
+    return render_template("index.html", first_name="Tomek", last_name="K.")
 
 if __name__ == '__main__':
     app.run(debug=True, port=80);
