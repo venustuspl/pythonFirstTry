@@ -1,0 +1,12 @@
+<html>
+<body>
+<table border="1" width="40%">
+    {%for p in products %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.name}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

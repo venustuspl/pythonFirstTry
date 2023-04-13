@@ -1,6 +1,6 @@
 import jinja2
 from flask import Flask, render_template
-
+import MyDataSource as mds
 app = Flask(__name__)
 
 
@@ -16,5 +16,12 @@ def hello():
 def hello_template():
     return render_template("index.html", first_name="Tomek", last_name="K.")
 
+#Jinja to lekki silnik szablonów, który pozwala na tworzenie dynamicznych stron internetowych za pomocą języka Python
+@app.route("/products")
+def products():
+    return render_template("products.html", products=mds.getAll())
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=80);
+
