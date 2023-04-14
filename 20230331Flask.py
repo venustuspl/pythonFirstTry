@@ -1,7 +1,8 @@
 import jinja2
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session
 import MyDataSource as mds
 app = Flask(__name__)
+app.config["SECRET_KEY"]='moje_haslo'
 
 
 @app.route('/')
@@ -21,6 +22,12 @@ def hello_template():
 def products():
     return render_template("products.html", products=mds.getAll())
 
+@app.route("/my_session")
+def my_session():
+    print('adding user to session')
+    session['account_manager']='Mr. Smith'
+    print('logged user:' + session['account_manager'])
+    return "";
 
 if __name__ == '__main__':
     app.run(debug=True, port=80);
