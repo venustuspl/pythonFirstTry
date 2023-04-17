@@ -29,6 +29,17 @@ def my_session():
     print('logged user:' + session['account_manager'])
     return "";
 
+@app.route("/addProduct", methods=['GET'])
+def addProduct():
+     return render_template("addProduct.html")
+
+@app.route("/addProduct", methods=['POST'])
+def addProductPost():
+    nazwa=request.form['name']
+    opis = request.form['desc']
+    print(f"nazwa={nazwa}, opis={opis}")
+    return render_template("addProduct.html")
+
 if __name__ == '__main__':
     app.run(debug=True, port=80);
 
