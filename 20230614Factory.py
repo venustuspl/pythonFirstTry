@@ -25,8 +25,6 @@ class FabrykaSamochodow(ABC):
      def produkuj_samochod(self):
          pass
 
-
-
 class FabrykaSportowych(FabrykaSamochodow):
      def produkuj_samochod(self):
          return SportowySamochod()
@@ -38,8 +36,6 @@ class FabrykaLimuzyn(FabrykaSamochodow):
 class FabrykaMiejskich(FabrykaSamochodow):
      def produkuj_samochod(self):
          return SamochodMiejski()
-
-
 
 rodzaj='limuzyna'
 if rodzaj=='sportowy':
@@ -53,3 +49,5 @@ else:
 
 samochod=fabryka.produkuj_samochod();
 samochod.jedz()
+samochod2=fabryka.produkuj_samochod();
+samochod2.jedz()
